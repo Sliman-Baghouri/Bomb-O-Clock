@@ -9,7 +9,8 @@ export default function Bomb() {
         src={timerBomb}
         alt="Dynamite with timer."
       />
-      <div>
+      <div className={style.reflex} />
+      <div className={style.sevenSeg}>
         <p>00:00:00</p>
       </div>
     </div>

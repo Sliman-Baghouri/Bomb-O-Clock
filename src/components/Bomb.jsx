@@ -4,7 +4,7 @@ import style from '../styles/Bomb.module.css';
 
 export default function Bomb() {
   return (
-    <div className={style.bomb}>
+    <section className={style.bomb}>
       <img
         src={timerBomb}
         alt="Dynamite with timer."
@@ -13,6 +13,6 @@ export default function Bomb() {
       <div className={style.sevenSeg}>
         <p>00:00:00</p>
       </div>
-    </div>
+    </section>
   );
 }

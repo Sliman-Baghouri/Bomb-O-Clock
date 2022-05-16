@@ -1,11 +1,11 @@
-import './App.css'
+import React from 'react';
+import './App.css';
+import Bomb from './components/Bomb';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      
+      <Bomb />
     </div>
-  )
+  );
 }
-
-export default App

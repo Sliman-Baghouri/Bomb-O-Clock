@@ -1,0 +1,38 @@
+@font-face {
+  font-family: sevenSegment;
+  src: url('../fonts/seven_segment/Seven Segment.ttf');
+}
+
+.bomb {
+  position: relative;
+}
+
+.bomb img {
+  -webkit-user-drag: none;
+}
+
+.bomb div {
+  position: absolute;
+  top:153px;
+  left: 189px;
+  height: 49px;
+  width: 185px;
+  transform: translateY(-50%);
+  background-color: black;
+  border-radius: 4px;
+}
+
+.bomb div p {
+  font-size: 42px;
+  margin: 0;
+  margin-top: 3px;
+  letter-spacing: 4px;
+  color: aqua;
+  font-style: italic;
+  font-family: sevenSegment;
+  font-weight: bold;
+  position: relative;
+  right: 4px;
+  text-shadow: 0px 0px 10px #00FFFF;
+  user-select: none;
+}

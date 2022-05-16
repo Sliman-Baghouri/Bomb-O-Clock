@@ -1,0 +1,35 @@
+.buttons {
+  display: flex;
+  flex-flow: row wrap;
+  width: 166px;
+}
+
+.buttons button {
+  all: unset;
+  background-color: rgb(53, 53, 53);
+  padding: 10px 14px;
+  border: 1px solid black;
+  border-radius: 3px;
+  font-weight: bold;
+  margin: 8px;
+  transition: 0.2s;
+}
+
+.buttons button:hover {
+  cursor: pointer;
+}
+
+.buttons button:active {
+  transform: rotateX(-30deg) translateY(3px);
+}
+
+.zeroStart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons button:last-of-type {
+  width: 39%;
+  font-size: 16px;
+}

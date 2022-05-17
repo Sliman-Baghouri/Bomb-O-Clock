@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { TimerContext } from '../context/TimerProvider';
 import timerBomb from '../images/timer-bomb.png';
 import style from '../styles/Bomb.module.css';
 
 export default function Bomb() {
+  const { time } = useContext(TimerContext);
+  const display = `${time.substr(0, 2)}:${time.substr(2, 2)}:${time.substr(4, 2)}`;
+
   return (
     <section className={style.bomb}>
       <img
@@ -11,7 +15,11 @@ export default function Bomb() {
       />
       <div className={style.reflex} />
       <div className={style.sevenSeg}>
-        <p>00:00:00</p>
+        <p>
+          {
+            display
+          }
+        </p>
       </div>
     </section>
   );

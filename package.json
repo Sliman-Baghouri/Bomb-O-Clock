@@ -5,13 +5,12 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "format": "rome format ."
+    "preview": "vite preview"
   },
   "dependencies": {
+    "prop-types": "^15.8.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "seven-segment-display": "^0.2.0"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",

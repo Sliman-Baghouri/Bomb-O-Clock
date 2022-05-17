@@ -1,6 +1,7 @@
 .buttons {
   display: flex;
   flex-flow: row wrap;
+  min-width: 166px;
   width: 166px;
 }
 

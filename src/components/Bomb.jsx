@@ -4,8 +4,7 @@ import timerBomb from '../images/timer-bomb.png';
 import style from '../styles/Bomb.module.css';
 
 export default function Bomb() {
-  const { time } = useContext(TimerContext);
-  const display = `${time.substr(0, 2)}:${time.substr(2, 2)}:${time.substr(4, 2)}`;
+  const { display } = useContext(TimerContext);
 
   return (
     <section className={style.bomb}>
@@ -15,11 +14,7 @@ export default function Bomb() {
       />
       <div className={style.reflex} />
       <div className={style.sevenSeg}>
-        <p>
-          {
-            display
-          }
-        </p>
+        <p>{display}</p>
       </div>
     </section>
   );

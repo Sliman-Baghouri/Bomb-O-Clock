@@ -5,10 +5,11 @@ export const TimerContext = createContext();
 
 export default function TimerProvider({ children }) {
   const [time, setTime] = useState('000000');
+  const [display, setDisplay] = useState('00:00:00');
 
   const store = useMemo(() => ({
-    time, setTime,
-  }), [time, setTime]);
+    time, setTime, display, setDisplay,
+  }), [time, setTime, display, setDisplay]);
 
   return (
     <TimerContext.Provider value={store}>

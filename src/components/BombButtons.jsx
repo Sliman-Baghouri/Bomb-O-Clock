@@ -5,10 +5,12 @@ import { TimerContext } from '../context/TimerProvider';
 import style from '../styles/Buttons.module.css';
 import beep from '../audio/Button sound effect.ogg';
 import bombPlanted from '../audio/Bomb Has Been Planted - Sound Effect  CS:GO.mp3';
+import explosion from '../audio/Bomb C4 Explode Sound Effect [CS:GO].mp3';
 
 const buttons = [7, 8, 9, 4, 5, 6, 1, 2, 3, 0];
 const beepSound = new Audio(beep);
 const bombHasBeenPlanted = new Audio(bombPlanted);
+const explosionSound = new Audio(explosion);
 
 export default function BombButtons() {
   const {
@@ -69,6 +71,7 @@ export default function BombButtons() {
       if (hours === 0 && mins === 0 && secs < 0) {
         clearInterval(timer);
         setTime('000000');
+        explosionSound.play();
       }
     }, 1000);
   };

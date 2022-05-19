@@ -1,6 +1,7 @@
 import React from 'react';
 import pic from '../images/my-pic.png';
 import style from '../styles/Footer.module.css';
+import ghLogo from '../images/githubLogo.png';
 
 export default function Footer() {
   return (
@@ -12,7 +13,7 @@ export default function Footer() {
           <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
         </a>
         <a href="https://github.com/Cadavanaugh" target="_blank" rel="noreferrer">
-          <img src="https://cdn.icon-icons.com/icons2/2429/PNG/512/github_logo_icon_147285.png" alt="Github" />
+          <img src={ghLogo} alt="Github" />
         </a>
       </div>
     </footer>

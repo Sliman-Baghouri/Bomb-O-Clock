@@ -1,6 +1,6 @@
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable prefer-destructuring */
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { TimerContext } from '../context/TimerProvider';
 import style from '../styles/Buttons.module.css';
 import beep from '../audio/Button sound effect.ogg';
@@ -17,6 +17,7 @@ export default function BombButtons() {
     time, setTime, display, setDisplay,
   } = useContext(TimerContext);
   const timeArray = time.split('');
+  const [isDisabled, setIsDisabled] = useState(false);
 
   const handleClick = ({ target: { value } }) => {
     for (let x = 0; x <= 4; x += 1) {
@@ -33,6 +34,7 @@ export default function BombButtons() {
 
   const startBomb = () => {
     bombHasBeenPlanted.play();
+    setIsDisabled(true);
     let secs = Number(display.split(':')[2]);
     let mins = Number(display.split(':')[1]);
     let hours = Number(display.split(':')[0]);
@@ -71,6 +73,7 @@ export default function BombButtons() {
       if (hours === 0 && mins === 0 && secs < 0) {
         clearInterval(timer);
         setTime('000000');
+        setIsDisabled(false);
         explosionSound.play();
       }
     }, 1000);
@@ -79,7 +82,7 @@ export default function BombButtons() {
   return (
     <section className={style.buttons}>
       {buttons.map((x) => <button key={x} onClick={handleClick} value={x} type="button">{x}</button>)}
-      <button type="button" onClick={startBomb}>START</button>
+      <button type="button" disabled={isDisabled} onClick={startBomb}>START</button>
     </section>
   );
 }

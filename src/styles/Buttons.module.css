@@ -24,6 +24,12 @@
   transform: rotateX(-30deg) translateY(3px);
 }
 
+.buttons button:disabled {
+  color: gray;
+  cursor: initial;
+  transform: none;
+}
+
 .zeroStart {
   display: flex;
   justify-content: space-between;

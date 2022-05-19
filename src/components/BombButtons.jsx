@@ -1,11 +1,11 @@
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable prefer-destructuring */
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
+import explosion from '../audio/Bomb C4 Explode Sound Effect [CS:GO].mp3';
+import bombPlanted from '../audio/Bomb Has Been Planted - Sound Effect  CS:GO.mp3';
+import beep from '../audio/Button sound effect.ogg';
 import { TimerContext } from '../context/TimerProvider';
 import style from '../styles/Buttons.module.css';
-import beep from '../audio/Button sound effect.ogg';
-import bombPlanted from '../audio/Bomb Has Been Planted - Sound Effect  CS:GO.mp3';
-import explosion from '../audio/Bomb C4 Explode Sound Effect [CS:GO].mp3';
 
 const buttons = [7, 8, 9, 4, 5, 6, 1, 2, 3, 0];
 const beepSound = new Audio(beep);
@@ -17,7 +17,6 @@ export default function BombButtons() {
     time, setTime, display, setDisplay,
   } = useContext(TimerContext);
   const timeArray = time.split('');
-  const [isDisabled, setIsDisabled] = useState(false);
 
   const handleClick = ({ target: { value } }) => {
     for (let x = 0; x <= 4; x += 1) {
@@ -34,7 +33,8 @@ export default function BombButtons() {
 
   const startBomb = () => {
     bombHasBeenPlanted.play();
-    setIsDisabled(true);
+    document.getElementById('buttons').style.display = 'none';
+
     let secs = Number(display.split(':')[2]);
     let mins = Number(display.split(':')[1]);
     let hours = Number(display.split(':')[0]);
@@ -73,16 +73,16 @@ export default function BombButtons() {
       if (hours === 0 && mins === 0 && secs < 0) {
         clearInterval(timer);
         setTime('000000');
-        setIsDisabled(false);
         explosionSound.play();
+        document.getElementById('buttons').style.display = 'flex';
       }
     }, 1000);
   };
 
   return (
-    <section className={style.buttons}>
-      {buttons.map((x) => <button key={x} disabled={isDisabled} onClick={handleClick} value={x} type="button">{x}</button>)}
-      <button type="button" disabled={isDisabled} onClick={startBomb}>START</button>
+    <section id="buttons" className={style.buttons}>
+      {buttons.map((x) => <button key={x} onClick={handleClick} value={x} type="button">{x}</button>)}
+      <button type="button" onClick={startBomb}>START</button>
     </section>
   );
 }

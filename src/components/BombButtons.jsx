@@ -81,7 +81,7 @@ export default function BombButtons() {
 
   return (
     <section className={style.buttons}>
-      {buttons.map((x) => <button key={x} onClick={handleClick} value={x} type="button">{x}</button>)}
+      {buttons.map((x) => <button key={x} disabled={isDisabled} onClick={handleClick} value={x} type="button">{x}</button>)}
       <button type="button" disabled={isDisabled} onClick={startBomb}>START</button>
     </section>
   );

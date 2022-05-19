@@ -13,10 +13,10 @@
 
 .sevenSeg, .reflex {
   position: absolute;
-  top:153px;
-  left: 189px;
-  height: 49px;
-  width: 185px;
+  top:43.3%;
+  left: 26.3%;
+  height: 14%;
+  width: 25.5%;
   transform: translateY(-50%);
   background-color: black;
   border-radius: 4px;
@@ -26,14 +26,14 @@
 .sevenSeg p {
   font-size: 42px;
   margin: 0;
-  margin-top: 3px;
+  margin-top: 3%;
   letter-spacing: 4px;
   color: #68fcfe;
   font-style: italic;
   font-family: sevenSegment;
   font-weight: bold;
   position: relative;
-  right: 4px;
+  right: 1.5%;
   text-shadow: 0px 0px 8px #68fcfe;
   user-select: none;
 }
@@ -42,7 +42,18 @@
   clip-path: polygon(0 0, 63% 0, 42% 99%, 0% 100%);
   z-index: 2;
   border-radius: 0;
-  height: 49px;
-  top: 153px;
+  height: 14%;
+  top:43.3%;
   background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(102,102,102,0.5) 100%);
+}
+
+@media screen and (max-width: 480px) {
+  .bomb img {
+    width: 100%;
+  }
+  .sevenSeg p {
+    right: 1%;
+    font-size: 5.5vw;
+    letter-spacing: 2.5px;
+  }
 }

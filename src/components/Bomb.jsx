@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { TimerContext } from '../context/TimerProvider';
-import timerBomb from '../images/timer-bomb.png';
+import timerBomb from '../images/timer-bomb.webp';
 import style from '../styles/Bomb.module.css';
 
 export default function Bomb() {

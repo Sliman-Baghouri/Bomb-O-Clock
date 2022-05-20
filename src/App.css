@@ -7,6 +7,13 @@
   height: 100vh;
 }
 
+.header h1 {
+  margin: 0;
+  position: relative;
+  top: 14vh;
+  text-align: center;
+}
+
 @media screen and (max-width: 480px) {
   .App {
     flex-direction: column;

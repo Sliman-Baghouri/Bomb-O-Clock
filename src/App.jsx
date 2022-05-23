@@ -13,7 +13,7 @@ export default function App() {
           🧨 Bomb O'Clock ⏱️
         </h1>
       </header>
-      <main className="App">
+      <main className="App" id="main">
         <Bomb />
         <BombButtons />
       </main>

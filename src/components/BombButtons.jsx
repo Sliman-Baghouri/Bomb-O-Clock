@@ -6,6 +6,7 @@ import bombPlanted from '../audio/Bomb Has Been Planted - Sound Effect  CS:GO.mp
 import beep from '../audio/Button sound effect.ogg';
 import { TimerContext } from '../context/TimerProvider';
 import style from '../styles/Buttons.module.css';
+import explosionGif from '../images/explosion.webp';
 
 const buttons = [7, 8, 9, 4, 5, 6, 1, 2, 3, 0];
 const beepSound = new Audio(beep);
@@ -75,6 +76,13 @@ export default function BombButtons() {
         setTime('000000');
         explosionSound.play();
         document.getElementById('buttons').style.display = 'flex';
+
+        const explosionImgTag = document.createElement('img');
+        explosionImgTag.src = explosionGif;
+        document.getElementById('main').appendChild(explosionImgTag);
+        setTimeout(() => {
+          document.getElementById('main').removeChild(explosionImgTag);
+        }, 3710);
       }
     }, 1000);
   };

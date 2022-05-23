@@ -4,19 +4,32 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  margin-top: 5vh;
+}
+
+.App > img {
+  width: 200%;
+  position: fixed;
+  left: 60%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 5;
 }
 
 .header h1 {
   margin: 0;
-  position: relative;
-  top: 14vh;
+  margin-top: 14vh;
   text-align: center;
 }
 
 @media screen and (max-width: 480px) {
   .App {
     flex-direction: column;
-    height: 90vh;
+    height: 50vh;
+  }
+
+  .App img {
+    width: 350%;
+    left: 71%;
   }
 }

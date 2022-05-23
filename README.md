@@ -12,4 +12,6 @@ I developed Bomb O'Clock to start using **pnpm** and **vite** as my standard Rea
 # 📹 Demo
 [Click here](https://cadavanaugh.github.io/Bomb-O-Clock/ "Bomb O'Clock Github Pages") to try it yourself!
 
-![Demo](src/images/Bomb-O-Clock-Demo.gif)
+<p align='center'>
+  <img src='./src/images/Mobile Demo.webp'>
+</p>

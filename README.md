@@ -9,7 +9,7 @@ I developed Bomb O'Clock to start using **pnpm** and **vite** as my standard Rea
 - Style modularization with **CSS Modules**
 - **Mobile** version
 
-# 📹 Demo
+## 📹 Demo
 [Click here](https://cadavanaugh.github.io/Bomb-O-Clock/ "Bomb O'Clock Github Pages") to try it yourself!
 
 <p align='center'>

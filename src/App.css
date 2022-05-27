@@ -4,7 +4,6 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 5vh;
 }
 
 .App > img {
@@ -14,18 +13,23 @@
   top: 50%;
   transform: translate(-50%,-50%);
   z-index: 5;
+  background-color: red;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .header h1 {
-  margin: 0;
-  margin-top: 14vh;
+  margin: 0 auto;
   text-align: center;
 }
 
 @media screen and (max-width: 480px) {
   .App {
     flex-direction: column;
-    height: 50vh;
   }
 
   .App img {

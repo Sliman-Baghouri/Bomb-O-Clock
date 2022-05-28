@@ -15,17 +15,6 @@
   z-index: 5;
 }
 
-.header {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.header h1 {
-  margin: 0 auto;
-  text-align: center;
-}
-
 @media screen and (max-width: 480px) {
   .App {
     flex-direction: column;
@@ -34,9 +23,5 @@
   .App img {
     width: 350%;
     left: 71%;
-  }
-
-  .header {
-    align-items: center;
   }
 }

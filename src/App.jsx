@@ -4,15 +4,12 @@ import './App.css';
 import Bomb from './components/Bomb';
 import BombButtons from './components/BombButtons';
 import Footer from './components/Footer';
+import Header from './components/Header';
 
 export default function App() {
   return (
     <>
-      <header className="header">
-        <h1>
-          🧨 Bomb O'Clock ⏱️
-        </h1>
-      </header>
+      <Header />
       <main className="App" id="main">
         <Bomb />
         <BombButtons />

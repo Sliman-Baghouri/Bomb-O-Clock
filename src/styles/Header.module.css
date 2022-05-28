@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.header h1 {
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    align-items: center;
+  }
+}

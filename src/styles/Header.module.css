@@ -40,9 +40,3 @@
   height: 35px;
   transition: .1s linear;
 }
-
-@media screen and (max-width: 480px) {
-  .header {
-    align-items: center;
-  }
-}

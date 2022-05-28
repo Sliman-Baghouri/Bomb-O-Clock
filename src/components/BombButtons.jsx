@@ -5,8 +5,8 @@ import explosion from '../audio/Bomb C4 Explode Sound Effect [CS:GO].mp3';
 import bombPlanted from '../audio/Bomb Has Been Planted - Sound Effect  CS:GO.mp3';
 import beep from '../audio/Button sound effect.ogg';
 import { TimerContext } from '../context/TimerProvider';
-import style from '../styles/Buttons.module.css';
 import explosionGif from '../images/explosion.webp';
+import style from '../styles/Buttons.module.css';
 
 const buttons = [7, 8, 9, 4, 5, 6, 1, 2, 3, 0];
 const beepSound = new Audio(beep);
@@ -15,7 +15,7 @@ const explosionSound = new Audio(explosion);
 
 export default function BombButtons() {
   const {
-    time, setTime, display, setDisplay,
+    time, setTime, display, setDisplay, opac
   } = useContext(TimerContext);
   const timeArray = time.split('');
 
@@ -31,6 +31,16 @@ export default function BombButtons() {
   useEffect(() => {
     setDisplay(`${time.substr(0, 2)}:${time.substr(2, 2)}:${time.substr(4, 2)}`);
   }, [time]);
+
+  useEffect(() => {
+    const soundFX = [beepSound, explosionSound, bombHasBeenPlanted];
+    if( opac === 100 ) {
+      soundFX.forEach(x => {x.muted = true;})
+    }
+    else{
+      soundFX.forEach(x => {x.muted = false;})
+    }
+  },[opac]);
 
   const startBomb = () => {
     bombHasBeenPlanted.play();

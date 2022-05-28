@@ -35,4 +35,8 @@
     width: 350%;
     left: 71%;
   }
+
+  .header {
+    align-items: center;
+  }
 }

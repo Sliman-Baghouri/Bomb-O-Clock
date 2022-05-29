@@ -11,7 +11,8 @@
   user-select: text;
 }
 
-.header div {
+.header button {
+  all: unset;
   width: 30px;
   height: 30px;
   display: flex;
@@ -23,18 +24,18 @@
   z-index: 10;
 }
 
-.header div:hover {
+.header button:hover {
   cursor: pointer;
 }
 
-.header div > * {
+.header button > * {
   position: absolute;
   width: 25px;
   height: 25px;
   color: gray;
 }
 
-.header div svg:nth-of-type(2) {
+.header button svg:nth-of-type(2) {
   color: rgb(144, 0, 0);
   width: 35px;
   height: 35px;

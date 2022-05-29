@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable prefer-destructuring */
 import React, { useContext, useEffect } from 'react';
@@ -15,7 +16,7 @@ const explosionSound = new Audio(explosion);
 
 export default function BombButtons() {
   const {
-    time, setTime, display, setDisplay, opac
+    time, setTime, display, setDisplay, opac,
   } = useContext(TimerContext);
   const timeArray = time.split('');
 
@@ -34,13 +35,12 @@ export default function BombButtons() {
 
   useEffect(() => {
     const soundFX = [beepSound, explosionSound, bombHasBeenPlanted];
-    if( opac === 100 ) {
-      soundFX.forEach(x => {x.muted = true;})
+    if (opac === 100) {
+      soundFX.forEach((x) => { x.muted = true; });
+    } else {
+      soundFX.forEach((x) => { x.muted = false; });
     }
-    else{
-      soundFX.forEach(x => {x.muted = false;})
-    }
-  },[opac]);
+  }, [opac]);
 
   const startBomb = () => {
     bombHasBeenPlanted.play();

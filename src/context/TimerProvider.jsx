@@ -9,7 +9,7 @@ export default function TimerProvider({ children }) {
   const [opac, setOpac] = useState(0);
 
   const store = useMemo(() => ({
-    time, setTime, display, setDisplay, opac, setOpac
+    time, setTime, display, setDisplay, opac, setOpac,
   }), [time, setTime, display, setDisplay, opac, setOpac]);
 
   return (

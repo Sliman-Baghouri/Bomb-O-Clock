@@ -7,6 +7,7 @@ I developed Bomb O'Clock to start using **pnpm** and **vite** as my standard Rea
 - Automatic **time conversion** (00:00:90 ➡️ 00:01:30)
 - **Explosion sound** when timer hits 00:00:00
 - Style modularization with **CSS Modules**
+- **Mute / Unmute** button
 - **Mobile** version
 
 ## 📹 Demo

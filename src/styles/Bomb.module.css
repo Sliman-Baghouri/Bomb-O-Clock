@@ -38,6 +38,12 @@
   user-select: none;
 }
 
+@-moz-document url-prefix() {
+  .sevenSeg p {
+    letter-spacing: 3px;
+  }
+}
+
 .reflex {
   clip-path: polygon(0 0, 63% 0, 42% 99%, 0% 100%);
   z-index: 2;

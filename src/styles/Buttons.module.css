@@ -1,18 +1,18 @@
 .buttons {
   display: flex;
   flex-flow: row wrap;
-  min-width: 166px;
   width: 166px;
+  height: 228px;
 }
 
 .buttons button {
   all: unset;
   background-color: rgb(53, 53, 53);
-  padding: 10px 14px;
-  border: 1px solid black;
+  padding: 5% 8.4%;
+  border: .12rem solid black;
   border-radius: 3px;
   font-weight: bold;
-  margin: 8px;
+  margin: 4%;
   transition: 0.2s;
 }
 

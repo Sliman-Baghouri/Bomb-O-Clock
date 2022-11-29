@@ -66,6 +66,7 @@ export default function BombButtons() {
           numbers[x] = `0${numbers[x]}`;
         }
       }
+      document.title = `${numbers[0]}:${numbers[1]}:${numbers[2]}`;
       setDisplay(`${numbers[0]}:${numbers[1]}:${numbers[2]}`);
 
       secs -= 1;
@@ -82,6 +83,7 @@ export default function BombButtons() {
       }
 
       if (hours === 0 && mins === 0 && secs < 0) {
+        document.title = "Bomb O'Clock";
         clearInterval(timer);
         setTime('000000');
         explosionSound.play();

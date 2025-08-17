@@ -4,6 +4,6 @@ import { defineConfig } from 'vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/Bomb-O-Clock/',
+  base: '/',
   plugins: [react()],
 });
